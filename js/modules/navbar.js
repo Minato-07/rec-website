@@ -11,15 +11,21 @@ export function initNavbar() {
 
     const header = document.getElementById("header");
 
-    const menu = document.getElementById("navbarMenu");
+    const mobileNav = document.getElementById("mobileNav");
 
     const toggle = document.getElementById("navbarToggle");
 
+    const closeButton = document.getElementById("mobileNavClose");
+
     const overlay = document.getElementById("navbarOverlay");
 
-    if (!header || !menu || !toggle || !overlay) return;
+    if (!header || !mobileNav || !toggle || !overlay) return;
 
-    const navLinks = menu.querySelectorAll(".navbar__link");
+    const desktopLinks = document.querySelectorAll(".navbar__link");
+
+    const mobileLinks = document.querySelectorAll(".mobile-nav__link");
+
+    const allLinks = [...desktopLinks, ...mobileLinks];
 
     const sections = document.querySelectorAll("main section[id]");
 
@@ -27,14 +33,13 @@ export function initNavbar() {
 
     let ticking = false;
 
-
     /* ==========================================
-       Open Menu
+       Open Mobile Menu
     ========================================== */
 
     function openMenu() {
 
-        menu.classList.add("is-open");
+        mobileNav.classList.add("is-open");
 
         overlay.classList.add("is-active");
 
@@ -48,14 +53,13 @@ export function initNavbar() {
 
     }
 
-
     /* ==========================================
-       Close Menu
+       Close Mobile Menu
     ========================================== */
 
     function closeMenu() {
 
-        menu.classList.remove("is-open");
+        mobileNav.classList.remove("is-open");
 
         overlay.classList.remove("is-active");
 
@@ -69,27 +73,25 @@ export function initNavbar() {
 
     }
 
-
     /* ==========================================
        Toggle
     ========================================== */
 
     toggle.addEventListener("click", () => {
 
-        if (isMenuOpen) {
-
-            closeMenu();
-
-        }
-
-        else {
-
-            openMenu();
-
-        }
+        isMenuOpen ? closeMenu() : openMenu();
 
     });
 
+    /* ==========================================
+       Close Button
+    ========================================== */
+
+    if (closeButton) {
+
+        closeButton.addEventListener("click", closeMenu);
+
+    }
 
     /* ==========================================
        Overlay
@@ -97,20 +99,13 @@ export function initNavbar() {
 
     overlay.addEventListener("click", closeMenu);
 
-
     /* ==========================================
        ESC Key
     ========================================== */
 
     document.addEventListener("keydown", (event) => {
 
-        if (
-
-            event.key === "Escape" &&
-
-            isMenuOpen
-
-        ) {
+        if (event.key === "Escape" && isMenuOpen) {
 
             closeMenu();
 
@@ -118,21 +113,15 @@ export function initNavbar() {
 
     });
 
-
     /* ==========================================
        Close After Clicking Link
     ========================================== */
 
-    navLinks.forEach(link => {
+    mobileLinks.forEach(link => {
 
-        link.addEventListener("click", () => {
-
-            closeMenu();
-
-        });
+        link.addEventListener("click", closeMenu);
 
     });
-
 
     /* ==========================================
        Sticky Navbar
@@ -153,7 +142,8 @@ export function initNavbar() {
         }
 
     }
-        /* ==========================================
+
+    /* ==========================================
        Active Navigation Link
     ========================================== */
 
@@ -163,16 +153,11 @@ export function initNavbar() {
 
         sections.forEach(section => {
 
-            const sectionTop = section.offsetTop - 140;
+            const top = section.offsetTop - 140;
 
-            const sectionBottom = sectionTop + section.offsetHeight;
+            const bottom = top + section.offsetHeight;
 
-            if (
-
-                window.scrollY >= sectionTop &&
-                window.scrollY < sectionBottom
-
-            ) {
+            if (window.scrollY >= top && window.scrollY < bottom) {
 
                 currentSection = section.id;
 
@@ -180,13 +165,11 @@ export function initNavbar() {
 
         });
 
-        navLinks.forEach(link => {
+        allLinks.forEach(link => {
 
             link.classList.remove("active");
 
-            const href = link.getAttribute("href");
-
-            if (href === `#${currentSection}`) {
+            if (link.getAttribute("href") === `#${currentSection}`) {
 
                 link.classList.add("active");
 
@@ -196,6 +179,37 @@ export function initNavbar() {
 
     }
 
+    /* ==========================================
+       Smooth Scroll
+    ========================================== */
+
+    allLinks.forEach(link => {
+
+        link.addEventListener("click", (event) => {
+
+            const targetId = link.getAttribute("href");
+
+            if (!targetId.startsWith("#")) return;
+
+            const target = document.querySelector(targetId);
+
+            if (!target) return;
+
+            event.preventDefault();
+
+            closeMenu();
+
+            target.scrollIntoView({
+
+                behavior: "smooth",
+
+                block: "start"
+
+            });
+
+        });
+
+    });
 
     /* ==========================================
        Scroll Handler
@@ -221,79 +235,25 @@ export function initNavbar() {
 
     }
 
-
     /* ==========================================
-       Smooth Scroll
+       Events
     ========================================== */
 
-    navLinks.forEach(link => {
+    window.addEventListener("scroll", handleScroll, {
 
-        link.addEventListener("click", event => {
-
-            const targetId = link.getAttribute("href");
-
-            if (!targetId.startsWith("#")) return;
-
-            const target = document.querySelector(targetId);
-
-            if (!target) return;
-
-            event.preventDefault();
-
-            target.scrollIntoView({
-
-                behavior: "smooth",
-
-                block: "start"
-
-            });
-
-        });
+        passive: true
 
     });
 
+    window.addEventListener("resize", () => {
 
-    /* ==========================================
-       Window Events
-    ========================================== */
+        if (window.innerWidth > 992 && isMenuOpen) {
 
-    window.addEventListener(
-
-        "scroll",
-
-        handleScroll,
-
-        {
-
-            passive: true
+            closeMenu();
 
         }
 
-    );
-
-
-    window.addEventListener(
-
-        "resize",
-
-        () => {
-
-            if (
-
-                window.innerWidth > 992 &&
-
-                isMenuOpen
-
-            ) {
-
-                closeMenu();
-
-            }
-
-        }
-
-    );
-
+    });
 
     /* ==========================================
        Initial State

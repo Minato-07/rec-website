@@ -43,44 +43,6 @@
     }
 
     /* ==========================================
-       Navbar
-    ========================================== */
-
-    .header{
-
-        top:12px;
-
-    }
-
-    .navbar{
-
-        height:70px;
-
-        padding:0 20px;
-
-        border-radius:18px;
-
-    }
-
-    .navbar__logo img{
-
-        height:48px;
-
-    }
-
-    .navbar__menu{
-
-        display:none;
-
-    }
-
-    .navbar__toggle{
-
-        display:flex;
-
-    }
-
-    /* ==========================================
        Hero
     ========================================== */
 
@@ -296,21 +258,19 @@
        Contact
     ========================================== */
 
-    .contact__wrapper{
+    .contact__grid{
 
         grid-template-columns:1fr;
 
-        gap:40px;
+    }
+
+    .contact__buttons{
+
+        flex-direction:column;
 
     }
 
-    .contact__form{
-
-        padding:30px 20px;
-
-    }
-
-    .contact__form .button{
+    .contact__buttons .button{
 
         width:100%;
 
@@ -336,9 +296,21 @@
 
     }
 
+    .footer__brand{
+
+        align-items:center;
+
+    }
+
     .footer__brand p{
 
         margin:0 auto;
+
+    }
+
+    .footer__social{
+
+        justify-content:center;
 
     }
 
@@ -346,21 +318,17 @@
 
         flex-direction:column;
 
-        gap:12px;
+        gap:18px;
 
         text-align:center;
 
     }
 
-    .footer__top-button{
+    .footer__copyright,
 
-        width:48px;
+    .footer__madeby{
 
-        height:48px;
-
-        right:20px;
-
-        bottom:20px;
+        text-align:center;
 
     }
 

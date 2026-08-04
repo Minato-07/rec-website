@@ -64,9 +64,15 @@
      NAVBAR
 ====================================================== -->
 
-<header class="header" id="header">
+<header
+    id="header"
+    class="header">
 
     <div class="container">
+
+        <!-- ==========================================
+             Main Navbar
+        =========================================== -->
 
         <nav
             class="navbar"
@@ -86,109 +92,48 @@
             </a>
 
 
-            <!-- Navigation -->
+            <!-- Desktop Navigation -->
 
             <ul
-                class="navbar__menu"
-                id="navbarMenu">
+                class="navbar__menu navbar__menu--desktop">
 
                 <li class="navbar__item">
-
-                    <a
-                        href="#hero"
-                        class="navbar__link active">
-
-                        Home
-
-                    </a>
-
+                    <a href="#hero" class="navbar__link active">Home</a>
                 </li>
 
                 <li class="navbar__item">
-
-                    <a
-                        href="#about"
-                        class="navbar__link">
-
-                        About
-
-                    </a>
-
+                    <a href="#about" class="navbar__link">About</a>
                 </li>
 
                 <li class="navbar__item">
-
-                    <a
-                        href="#games"
-                        class="navbar__link">
-
-                        Games
-
-                    </a>
-
+                    <a href="#games" class="navbar__link">Games</a>
                 </li>
 
                 <li class="navbar__item">
-
-                    <a
-                        href="#events"
-                        class="navbar__link">
-
-                        Events
-
-                    </a>
-
+                    <a href="#events" class="navbar__link">Events</a>
                 </li>
 
                 <li class="navbar__item">
-
-                    <a
-                        href="#gallery"
-                        class="navbar__link">
-
-                        Gallery
-
-                    </a>
-
+                    <a href="#gallery" class="navbar__link">Gallery</a>
                 </li>
 
                 <li class="navbar__item">
-
-                    <a
-                        href="#team"
-                        class="navbar__link">
-
-                        Executives
-
-                    </a>
-
+                    <a href="#team" class="navbar__link">Executives</a>
                 </li>
 
                 <li class="navbar__item">
-
-                    <a
-                        href="#contact"
-                        class="navbar__link">
-
-                        Contact
-
-                    </a>
-
+                    <a href="#contact" class="navbar__link">Contact</a>
                 </li>
 
             </ul>
 
 
-            <!-- CTA -->
+            <!-- Desktop CTA -->
 
             <a
-
                 href="https://docs.google.com/forms/d/e/1FAIpQLSeCxrvzvGGfWCeUoxum2o2wmXMyNfwqw_TQV_AgvWT2XFNBYQ/viewform"
-
                 target="_blank"
-
                 rel="noopener noreferrer"
-
                 class="button button--primary navbar__button">
 
                 Join REC
@@ -199,15 +144,10 @@
             <!-- Mobile Toggle -->
 
             <button
-
                 id="navbarToggle"
-
                 class="navbar__toggle"
-
-                aria-label="Toggle navigation"
-
-                aria-controls="navbarMenu"
-
+                aria-label="Toggle Navigation"
+                aria-controls="mobileNav"
                 aria-expanded="false">
 
                 <span></span>
@@ -217,14 +157,98 @@
             </button>
 
         </nav>
-        <div
-            class="navbar__overlay"
-            id="navbarOverlay">
-        </div>
 
     </div>
 
 </header>
+
+
+<!-- =====================================================
+     MOBILE DRAWER
+====================================================== -->
+
+<aside
+    id="mobileNav"
+    class="mobile-nav"
+    aria-label="Mobile Navigation">
+
+    <div class="mobile-nav__header">
+
+        <img
+            src="assets/logo/rec-circle.png"
+            alt="REC Logo">
+
+        <button
+            id="mobileNavClose"
+            class="mobile-nav__close"
+            aria-label="Close Navigation">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+    <nav class="mobile-nav__menu">
+
+        <a href="#hero" class="mobile-nav__link active">
+            Home
+        </a>
+
+        <a href="#about" class="mobile-nav__link">
+            About
+        </a>
+
+        <a href="#games" class="mobile-nav__link">
+            Games
+        </a>
+
+        <a href="#events" class="mobile-nav__link">
+            Events
+        </a>
+
+        <a href="#gallery" class="mobile-nav__link">
+            Gallery
+        </a>
+
+        <a href="#team" class="mobile-nav__link">
+            Executives
+        </a>
+
+        <a href="#contact" class="mobile-nav__link">
+            Contact
+        </a>
+
+    </nav>
+
+
+    <div class="mobile-nav__footer">
+
+        <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeCxrvzvGGfWCeUoxum2o2wmXMyNfwqw_TQV_AgvWT2XFNBYQ/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button button--primary">
+
+            Join REC
+
+        </a>
+
+    </div>
+
+</aside>
+
+
+<!-- =====================================================
+     NAVBAR OVERLAY
+====================================================== -->
+
+<div
+    id="navbarOverlay"
+    class="navbar__overlay">
+
+</div>
 <!-- =====================================================
      HERO
 ====================================================== -->
@@ -277,7 +301,9 @@
                 <div class="hero__buttons">
 
                     <a
-                        href="#contact"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSeCxrvzvGGfWCeUoxum2o2wmXMyNfwqw_TQV_AgvWT2XFNBYQ/viewform"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         class="button button--primary">
 
                         Join Community
@@ -850,7 +876,7 @@
         <!-- ==========================
              Bottom CTA
         =========================== -->
-
+<!-- 
         <div class="events__button">
 
             <a
@@ -863,7 +889,7 @@
 
             </a>
 
-        </div>
+        </div> -->
 
     </div>
 
@@ -982,17 +1008,6 @@
 
         </div>
 
-        <div class="gallery__footer">
-
-            <a
-                href="#contact"
-                class="button button--secondary">
-
-                View More Photos
-
-            </a>
-
-        </div>
 
     </div>
 
@@ -1138,7 +1153,7 @@
 
                     <p>
 
-                        Department
+                        MTE
 
                     </p>
 
@@ -1169,7 +1184,7 @@
 
                     <h3>
 
-                        FAHIM NABIL
+                        Fahim Fahad Nabil
 
                     </h3>
 
@@ -1206,13 +1221,13 @@
 
                     <h3>
 
-                        Name Here
+                        Tehami Naimus Salam
 
                     </h3>
 
                     <p>
 
-                        Department
+                        CE
 
                     </p>
 
@@ -1243,13 +1258,13 @@
 
                     <h3>
 
-                        Name Here
+                        Nural Fahim Choudhury Ove
 
                     </h3>
 
                     <p>
 
-                        Department
+                        EEE
 
                     </p>
 
@@ -1280,13 +1295,13 @@
 
                     <h3>
 
-                        Name Here
+                        Utsho Saha
 
                     </h3>
 
                     <p>
 
-                        Department
+                        EEE
 
                     </p>
 
@@ -1317,13 +1332,13 @@
 
                     <h3>
 
-                        Name Here
+                        Muhaiminul Islam Tahsin
 
                     </h3>
 
                     <p>
 
-                        Department
+                        EEE
 
                     </p>
 
@@ -1354,13 +1369,13 @@
 
                     <h3>
 
-                        Name Here
+                        Emran Hassan
 
                     </h3>
 
                     <p>
 
-                        Department
+                        EEE
 
                     </p>
 
@@ -1424,7 +1439,9 @@
                 <div class="cta__buttons">
 
                     <a
-                        href="#contact"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSeCxrvzvGGfWCeUoxum2o2wmXMyNfwqw_TQV_AgvWT2XFNBYQ/viewform"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         class="button button--primary">
 
                         Become a Member
