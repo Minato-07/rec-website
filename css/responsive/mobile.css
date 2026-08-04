@@ -1,0 +1,367 @@
+/* =====================================================
+   Mobile (≤ 768px)
+===================================================== */
+
+@media (max-width: 768px){
+
+    /* ==========================================
+       Global
+    ========================================== */
+
+    .container{
+
+        width:92%;
+
+    }
+
+    section{
+
+        padding:80px 0;
+
+    }
+
+    .section-header{
+
+        margin-bottom:50px;
+
+        text-align:center;
+
+    }
+
+    .section-title{
+
+        font-size:2rem;
+
+        line-height:1.2;
+
+    }
+
+    .section-description{
+
+        font-size:.95rem;
+
+    }
+
+    /* ==========================================
+       Navbar
+    ========================================== */
+
+    .header{
+
+        top:12px;
+
+    }
+
+    .navbar{
+
+        height:70px;
+
+        padding:0 20px;
+
+        border-radius:18px;
+
+    }
+
+    .navbar__logo img{
+
+        height:48px;
+
+    }
+
+    .navbar__menu{
+
+        display:none;
+
+    }
+
+    .navbar__toggle{
+
+        display:flex;
+
+    }
+
+    /* ==========================================
+       Hero
+    ========================================== */
+
+    .hero{
+
+        min-height:auto;
+
+        padding:140px 0 80px;
+
+    }
+
+    .hero__wrapper{
+
+        grid-template-columns:1fr;
+
+        gap:50px;
+
+        text-align:center;
+
+    }
+
+    .hero__content{
+
+        align-items:center;
+
+    }
+
+    .hero__title{
+
+        font-size:2.8rem;
+
+    }
+
+    .hero__description{
+
+        font-size:1rem;
+
+    }
+
+    .hero__buttons{
+
+        width:100%;
+
+        flex-direction:column;
+
+    }
+
+    .hero__buttons .button{
+
+        width:100%;
+
+    }
+
+    .hero__stats{
+
+        width:100%;
+
+        justify-content:space-between;
+
+        gap:20px;
+
+    }
+
+    .hero__stat{
+
+        flex:1;
+
+    }
+
+    .hero__stat h3{
+
+        font-size:1.6rem;
+
+    }
+
+    .hero__logo img{
+
+        width:100%;
+
+        max-width:320px;
+
+    }
+
+    .hero__scroll{
+
+        display:none;
+
+    }
+
+    /* ==========================================
+       About
+    ========================================== */
+
+    .about__content{
+
+        grid-template-columns:1fr;
+
+        gap:50px;
+
+    }
+
+    .about__cards{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .about__stats{
+
+        grid-template-columns:1fr;
+
+    }
+
+    /* ==========================================
+       Games
+    ========================================== */
+
+    .games__grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    /* ==========================================
+       Events
+    ========================================== */
+
+    .events__grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .event-card{
+
+        flex-direction:column;
+
+    }
+
+    .event-card__date{
+
+        width:100%;
+
+        height:auto;
+
+        padding:18px;
+
+        flex-direction:row;
+
+        gap:12px;
+
+    }
+
+    /* ==========================================
+       Gallery
+    ========================================== */
+
+    .gallery__grid{
+
+        grid-template-columns:1fr;
+
+        grid-auto-rows:220px;
+
+    }
+
+    .gallery__item--large,
+
+    .gallery__item--wide{
+
+        grid-column:span 1;
+
+        grid-row:span 1;
+
+    }
+
+    /* ==========================================
+       Team
+    ========================================== */
+
+    .team__grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    /* ==========================================
+       CTA
+    ========================================== */
+
+    .cta__wrapper{
+
+        padding:40px 24px;
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+
+    }
+
+    .cta__buttons{
+
+        flex-direction:column;
+
+    }
+
+    .cta__buttons .button{
+
+        width:100%;
+
+    }
+
+    /* ==========================================
+       Contact
+    ========================================== */
+
+    .contact__wrapper{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+
+    }
+
+    .contact__form{
+
+        padding:30px 20px;
+
+    }
+
+    .contact__form .button{
+
+        width:100%;
+
+    }
+
+    /* ==========================================
+       Footer
+    ========================================== */
+
+    .footer{
+
+        padding:80px 0 30px;
+
+    }
+
+    .footer__top{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+
+        text-align:center;
+
+    }
+
+    .footer__brand p{
+
+        margin:0 auto;
+
+    }
+
+    .footer__bottom{
+
+        flex-direction:column;
+
+        gap:12px;
+
+        text-align:center;
+
+    }
+
+    .footer__top-button{
+
+        width:48px;
+
+        height:48px;
+
+        right:20px;
+
+        bottom:20px;
+
+    }
+
+}

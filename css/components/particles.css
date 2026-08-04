@@ -1,0 +1,159 @@
+/* =====================================================
+   RUET Esports Community
+   Particles
+   Version 0.2
+===================================================== */
+
+
+/* ==========================================
+   PARTICLE CONTAINER
+========================================== */
+
+.hero__particles {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+}
+
+
+/* ==========================================
+   PARTICLE
+========================================== */
+
+.hero__particle {
+
+    position: absolute;
+
+    width: 4px;
+
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: rgba(50,230,118,.55);
+
+    animation: particleFloat linear infinite;
+
+}
+
+
+/* ==========================================
+   PARTICLE POSITIONS
+========================================== */
+
+.hero__particle:nth-child(1){
+
+    left:10%;
+    top:85%;
+
+    animation-duration:14s;
+
+}
+
+.hero__particle:nth-child(2){
+
+    left:22%;
+    top:75%;
+
+    animation-duration:18s;
+
+}
+
+.hero__particle:nth-child(3){
+
+    left:35%;
+    top:95%;
+
+    animation-duration:15s;
+
+}
+
+.hero__particle:nth-child(4){
+
+    left:48%;
+    top:82%;
+
+    animation-duration:20s;
+
+}
+
+.hero__particle:nth-child(5){
+
+    left:60%;
+    top:92%;
+
+    animation-duration:17s;
+
+}
+
+.hero__particle:nth-child(6){
+
+    left:72%;
+    top:78%;
+
+    animation-duration:13s;
+
+}
+
+.hero__particle:nth-child(7){
+
+    left:84%;
+    top:90%;
+
+    animation-duration:19s;
+
+}
+
+.hero__particle:nth-child(8){
+
+    left:92%;
+    top:86%;
+
+    animation-duration:16s;
+
+}
+
+
+/* ==========================================
+   PARTICLE ANIMATION
+========================================== */
+
+@keyframes particleFloat{
+
+    from{
+
+        transform:translateY(0);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:.8;
+
+    }
+
+    80%{
+
+        opacity:.4;
+
+    }
+
+    to{
+
+        transform:translateY(-120vh);
+
+        opacity:0;
+
+    }
+
+}

@@ -2,64 +2,1737 @@
 <html lang="en">
 
 <head>
-    <!-- =========================
-         BASIC META
-    ========================== -->
+
+    <!-- ==========================================
+         Meta
+    =========================================== -->
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Official website of RUET Esports Community (REC).">
+
+    <meta
+        name="keywords"
+        content="RUET, Esports, Gaming, Community, Bangladesh">
+
+    <meta
+        name="author"
+        content="RUET Esports Community">
 
     <title>RUET Esports Community</title>
 
-    <meta name="description"
-        content="Official website of RUET Esports Community. Join tournaments, events and represent RUET in competitive esports.">
-
-    <!-- =========================
-         GOOGLE FONTS
-    ========================== -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- ==========================================
+         Google Fonts
+    =========================================== -->
 
     <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
+          href="https://fonts.googleapis.com">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Press+Start+2P&display=swap"
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <!-- =========================
-         CSS
-    ========================== -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">    
 
-    <link rel="stylesheet" href="css/style.css">
+    <!-- ==========================================
+         Main CSS
+    =========================================== -->
 
-    <link rel="stylesheet" href="css/responsive.css">
+    <link
+        rel="stylesheet"
+        href="css/main.css">
+
+
 
 </head>
 
 <body>
 
-    <!-- ===========================================
-                    HEADER
-    ============================================ -->
+<!-- =====================================================
+     NAVBAR
+====================================================== -->
 
-    <header class="header">
+<header class="header" id="header">
 
-        <div class="container">
+    <div class="container">
 
-            <nav class="navbar">
+        <nav
+            class="navbar"
+            aria-label="Primary Navigation">
 
-                <!-- Logo -->
+            <!-- Logo -->
 
-                <a href="#" class="logo">
+            <a
+                href="#hero"
+                class="navbar__logo"
+                aria-label="RUET Esports Community">
 
-                    <img src="assets/logo/rec-circle.png"
-                        alt="REC Logo">
+                <img
+                    src="assets/logo/rec-circle.png"
+                    alt="RUET Esports Community Logo">
 
-                </a>
+            </a>
 
-                <!-- Navigation -->
 
-                <ul class="nav-menu">
+            <!-- Navigation -->
+
+            <ul
+                class="navbar__menu"
+                id="navbarMenu">
+
+                <li class="navbar__item">
+
+                    <a
+                        href="#hero"
+                        class="navbar__link active">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+                <li class="navbar__item">
+
+                    <a
+                        href="#about"
+                        class="navbar__link">
+
+                        About
+
+                    </a>
+
+                </li>
+
+                <li class="navbar__item">
+
+                    <a
+                        href="#games"
+                        class="navbar__link">
+
+                        Games
+
+                    </a>
+
+                </li>
+
+                <li class="navbar__item">
+
+                    <a
+                        href="#events"
+                        class="navbar__link">
+
+                        Events
+
+                    </a>
+
+                </li>
+
+                <li class="navbar__item">
+
+                    <a
+                        href="#gallery"
+                        class="navbar__link">
+
+                        Gallery
+
+                    </a>
+
+                </li>
+
+                <li class="navbar__item">
+
+                    <a
+                        href="#team"
+                        class="navbar__link">
+
+                        Executives
+
+                    </a>
+
+                </li>
+
+                <li class="navbar__item">
+
+                    <a
+                        href="#contact"
+                        class="navbar__link">
+
+                        Contact
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+            <!-- CTA -->
+
+            <a
+
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeCxrvzvGGfWCeUoxum2o2wmXMyNfwqw_TQV_AgvWT2XFNBYQ/viewform"
+
+                target="_blank"
+
+                rel="noopener noreferrer"
+
+                class="button button--primary navbar__button">
+
+                Join REC
+
+            </a>
+
+
+            <!-- Mobile Toggle -->
+
+            <button
+
+                id="navbarToggle"
+
+                class="navbar__toggle"
+
+                aria-label="Toggle navigation"
+
+                aria-controls="navbarMenu"
+
+                aria-expanded="false">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </nav>
+        <div
+            class="navbar__overlay"
+            id="navbarOverlay">
+        </div>
+
+    </div>
+
+</header>
+<!-- =====================================================
+     HERO
+====================================================== -->
+
+<section
+    id="hero"
+    class="hero">
+
+    <div class="hero__grid"></div>
+
+    <div class="hero__glow"></div>
+
+    <div class="hero__particles"></div>
+
+    <div class="container">
+
+        <div class="hero__wrapper">
+
+            <div class="hero__content">
+
+                <span class="hero__tag">
+
+                    OFFICIAL ESPORTS COMMUNITY OF RUET
+
+                </span>
+
+                <h1 class="hero__title">
+
+                    PLAY.<br>
+
+                    COMPETE.<br>
+
+                    <span>REPRESENT RUET.</span>
+
+                </h1>
+
+                <p class="hero__description">
+
+                    Join the official gaming community of
+                    Rajshahi University of Engineering &
+                    Technology.
+
+                    Participate in tournaments, improve your
+                    skills, build lifelong friendships and
+                    proudly represent RUET in inter-university
+                    esports competitions.
+
+                </p>
+
+                <div class="hero__buttons">
+
+                    <a
+                        href="#contact"
+                        class="button button--primary">
+
+                        Join Community
+
+                    </a>
+
+                    <a
+                        href="#events"
+                        class="button button--secondary">
+
+                        Upcoming Events
+
+                    </a>
+
+                </div>
+
+                <div class="hero__stats">
+
+                    <div class="hero__stat">
+
+                        <h3>500+</h3>
+
+                        <span>Members</span>
+
+                    </div>
+
+                    <div class="hero__stat">
+
+                        <h3>25+</h3>
+
+                        <span>Events</span>
+
+                    </div>
+
+                    <div class="hero__stat">
+
+                        <h3>10+</h3>
+
+                        <span>Games</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="hero__visual">
+
+                <div class="hero__logo">
+
+                    <img
+                        src="assets/logo/rec-horizontal.png"
+                        alt="RUET Esports Community">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="hero__scroll">
+
+        <span class="hero__scroll-line"></span>
+
+        <span class="hero__scroll-text">
+
+            Scroll Down
+
+        </span>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     ABOUT
+====================================================== -->
+
+<section id="about" class="about">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                ABOUT REC
+            </span>
+
+            <h2 class="section-title">
+                More Than Just a Gaming Club
+            </h2>
+
+            <p class="section-description">
+                RUET Esports Community (REC) brings together
+                students who are passionate about competitive
+                gaming, teamwork, leadership and technology.
+                Our goal is to build a friendly and competitive
+                environment where every gamer can improve,
+                compete and proudly represent RUET.
+            </p>
+
+        </div>
+
+        <div class="about__content">
+
+            <div class="about__text">
+
+                <h3>
+                    Why Join REC?
+                </h3>
+
+                <p>
+                    Whether you're a casual player or an
+                    experienced competitor, REC provides a
+                    platform to meet teammates, participate in
+                    tournaments, attend gaming events and
+                    improve your competitive skills.
+                </p>
+
+                <p>
+                    We believe esports is more than playing
+                    games—it's about communication,
+                    collaboration, discipline and building a
+                    strong community.
+                </p>
+
+            </div>
+
+            <div class="about__cards">
+
+                <div class="card about-card">
+
+                    <div class="about-card__icon">
+                        🎮
+                    </div>
+
+                    <h3>
+                        Competitive Gaming
+                    </h3>
+
+                    <p>
+                        Participate in internal and
+                        inter-university tournaments.
+                    </p>
+
+                </div>
+
+                <div class="card about-card">
+
+                    <div class="about-card__icon">
+                        🤝
+                    </div>
+
+                    <h3>
+                        Community
+                    </h3>
+
+                    <p>
+                        Meet fellow gamers and become part of
+                        an active esports family.
+                    </p>
+
+                </div>
+
+                <div class="card about-card">
+
+                    <div class="about-card__icon">
+                        🏆
+                    </div>
+
+                    <h3>
+                        Tournaments
+                    </h3>
+
+                    <p>
+                        Showcase your skills through club
+                        events and university competitions.
+                    </p>
+
+                </div>
+
+                <div class="card about-card">
+
+                    <div class="about-card__icon">
+                        🚀
+                    </div>
+
+                    <h3>
+                        Growth
+                    </h3>
+
+                    <p>
+                        Develop teamwork, leadership and
+                        communication through esports.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="about__stats">
+
+            <div class="card stat-card">
+                <h3>500+</h3>
+                <span>Community Members</span>
+            </div>
+
+            <div class="card stat-card">
+                <h3>30+</h3>
+                <span>Events Organized</span>
+            </div>
+
+            <div class="card stat-card">
+                <h3>10+</h3>
+                <span>Supported Games</span>
+            </div>
+
+            <div class="card stat-card">
+                <h3>5+</h3>
+                <span>Years of Community</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     FEATURED GAMES
+====================================================== -->
+
+<section id="games" class="games">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                FEATURED GAMES
+            </span>
+
+            <h2 class="section-title">
+                Games We Play
+            </h2>
+
+            <p class="section-description">
+                From tactical shooters to mobile MOBAs,
+                REC welcomes players from every
+                competitive title.
+            </p>
+
+        </div>
+
+        <div class="games__grid">
+
+            <article class="game-card">
+
+                <div class="game-card__image">
+
+                    <img
+                        src="assets/games/valorant.jpg"
+                        alt="Valorant">
+
+                </div>
+
+                <div class="game-card__content">
+
+                    <h3>VALORANT</h3>
+
+                    <p>
+                        Tactical 5v5 shooter requiring
+                        teamwork and precision.
+                    </p>
+
+                    <span class="game-card__platform">
+                        PC
+                    </span>
+
+                </div>
+
+            </article>
+
+            <article class="game-card">
+
+                <div class="game-card__image">
+
+                    <img
+                        src="assets/games/pubgm.jpg"
+                        alt="PUBG Mobile">
+
+                </div>
+
+                <div class="game-card__content">
+
+                    <h3>PUBG MOBILE</h3>
+
+                    <p>
+                        Battle royale action with exciting
+                        campus tournaments.
+                    </p>
+
+                    <span class="game-card__platform">
+                        Mobile
+                    </span>
+
+                </div>
+
+            </article>
+
+            <article class="game-card">
+
+                <div class="game-card__image">
+
+                    <img
+                        src="assets/games/mlbb.jpg"
+                        alt="Mobile Legends">
+
+                </div>
+
+                <div class="game-card__content">
+
+                    <h3>MOBILE LEGENDS</h3>
+
+                    <p>
+                        Fast-paced 5v5 MOBA focused on
+                        teamwork and strategy.
+                    </p>
+
+                    <span class="game-card__platform">
+                        Mobile
+                    </span>
+
+                </div>
+
+            </article>
+
+            <article class="game-card">
+
+                <div class="game-card__image">
+
+                    <img
+                        src="assets/games/fc26.jpg"
+                        alt="EA Sports FC">
+
+                </div>
+
+                <div class="game-card__content">
+
+                    <h3>EA SPORTS FC</h3>
+
+                    <p>
+                        Football simulation for players
+                        who love competitive sports.
+                    </p>
+
+                    <span class="game-card__platform">
+                        PC / Console
+                    </span>
+
+                </div>
+
+            </article>
+
+            <article class="game-card">
+
+                <div class="game-card__image">
+
+                    <img
+                        src="assets/games/cs2.jpg"
+                        alt="Counter-Strike 2">
+
+                </div>
+
+                <div class="game-card__content">
+
+                    <h3>COUNTER-STRIKE 2</h3>
+
+                    <p>
+                        Tactical FPS requiring precision,
+                        communication and teamwork.
+                    </p>
+
+                    <span class="game-card__platform">
+                        PC
+                    </span>
+
+                </div>
+
+            </article>
+
+            <article class="game-card game-card--more">
+
+                <div class="game-card__content">
+
+                    <h3>
+                        + More Games
+                    </h3>
+
+                    <p>
+                        Dota 2, Rocket League,
+                        Free Fire, Chess,
+                        Clash Royale and more.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     EVENTS
+====================================================== -->
+
+<section
+    id="events"
+    class="events">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+
+                EVENTS
+
+            </span>
+
+            <h2 class="section-title">
+
+                Tournaments & Activities
+
+            </h2>
+
+            <p class="section-description">
+
+                Join our competitive tournaments, educational
+                workshops, community meetups and exciting
+                gaming nights throughout the year.
+
+            </p>
+
+        </div>
+
+
+        <div class="events__grid">
+
+
+            <!-- ==========================
+                 Event 1
+            =========================== -->
+
+            <article class="card event-card">
+
+
+                <div class="event-card__content">
+
+                    <span class="event-card__badge">
+
+                        Tournament
+
+                    </span>
+
+                    <h3>
+
+                        Valorant Campus Championship
+
+                    </h3>
+
+                    <p>
+
+                        Gather your squad and battle against
+                        the strongest teams of RUET for the
+                        championship title and exclusive prizes.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==========================
+                 Event 2
+            =========================== -->
+
+            <article class="card event-card">
+
+
+
+                <div class="event-card__content">
+
+                    <span class="event-card__badge">
+
+                        Workshop
+
+                    </span>
+
+                    <h3>
+
+                        Esports Strategy Session
+
+                    </h3>
+
+                    <p>
+
+                        Improve your communication,
+                        leadership, drafting and competitive
+                        decision-making with experienced players.
+
+                    </p>
+
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==========================
+                 Event 3
+            =========================== -->
+
+            <article class="card event-card">
+
+           
+
+
+                <div class="event-card__content">
+
+                    <span class="event-card__badge">
+
+                        Community Night
+
+                    </span>
+
+                    <h3>
+
+                        REC Gaming Night
+
+                    </h3>
+
+                    <p>
+
+                        A fun evening filled with casual
+                        matches, networking, mini-games and
+                        exciting community challenges.
+
+                    </p>
+
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <!-- ==========================
+             Bottom CTA
+        =========================== -->
+
+        <div class="events__button">
+
+            <a
+                href="https://www.facebook.com/share/1Ekezjy7Fy/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button button--secondary">
+
+                View All Events
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =====================================================
+     GALLERY
+====================================================== -->
+
+<section id="gallery" class="gallery">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                GALLERY
+            </span>
+
+            <h2 class="section-title">
+                Moments That Define REC
+            </h2>
+
+            <p class="section-description">
+                Every tournament, workshop and meetup creates
+                unforgettable memories. Explore highlights from
+                our community and witness the spirit of REC.
+            </p>
+
+        </div>
+
+        <div class="gallery__grid">
+
+            <div class="gallery__item gallery__item--large">
+
+                <img
+                    src="assets/gallery/gallery-1.jpg"
+                    alt="Campus Championship">
+
+                <div class="gallery__overlay">
+
+                    <h3>Campus Championship</h3>
+
+                </div>
+
+            </div>
+
+            <div class="gallery__item">
+
+                <img
+                    src="assets/gallery/gallery-2.jpg"
+                    alt="Gaming Night">
+
+                <div class="gallery__overlay">
+
+                    <h3>Gaming Night</h3>
+
+                </div>
+
+            </div>
+
+            <div class="gallery__item">
+
+                <img
+                    src="assets/gallery/gallery-3.jpg"
+                    alt="Community Meetup">
+
+                <div class="gallery__overlay">
+
+                    <h3>Community Meetup</h3>
+
+                </div>
+
+            </div>
+
+            <div class="gallery__item">
+
+                <img
+                    src="assets/gallery/gallery-4.jpg"
+                    alt="Workshop">
+
+                <div class="gallery__overlay">
+
+                    <h3>Workshop</h3>
+
+                </div>
+
+            </div>
+
+            <div class="gallery__item">
+
+                <img
+                    src="assets/gallery/gallery-5.jpg"
+                    alt="Prize Ceremony">
+
+                <div class="gallery__overlay">
+
+                    <h3>Prize Ceremony</h3>
+
+                </div>
+
+            </div>
+
+            <div class="gallery__item gallery__item--wide">
+
+                <img
+                    src="assets/gallery/gallery-6.jpg"
+                    alt="REC Community">
+
+                <div class="gallery__overlay">
+
+                    <h3>The REC Family</h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="gallery__footer">
+
+            <a
+                href="#contact"
+                class="button button--secondary">
+
+                View More Photos
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     EXECUTIVE PANEL
+====================================================== -->
+
+<section
+    id="team"
+    class="team">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+
+                EXECUTIVE PANEL
+
+            </span>
+
+            <h2 class="section-title">
+
+                Meet the Executive Panel
+
+            </h2>
+
+            <p class="section-description">
+
+                The RUET Esports Community is led by a dedicated
+                team of passionate students committed to organizing
+                tournaments, managing community activities and
+                fostering the growth of esports at RUET.
+
+            </p>
+
+        </div>
+
+
+        <div class="team__grid">
+
+            <!-- President -->
+
+            <article class="team-card">
+
+                <div class="team-card__image">
+
+                    <img
+                        src="assets/team/president.jpg"
+                        alt="President">
+
+                </div>
+
+                <div class="team-card__content">
+
+                    <span class="team-card__position">
+
+                        President
+
+                    </span>
+
+                    <h3>
+
+                        SHADMAN SALEHEEN
+
+                    </h3>
+
+                    <p>
+
+                        CSE
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- General Secretary -->
+
+            <article class="team-card">
+
+                <div class="team-card__image">
+
+                    <img
+                        src="assets/team/general-secretary.jpg"
+                        alt="General Secretary">
+
+                </div>
+
+                <div class="team-card__content">
+
+                    <span class="team-card__position">
+
+                        General Secretary
+
+                    </span>
+
+                    <h3>
+
+                        RADIN BIN HOSSAIN
+
+                    </h3>
+
+                    <p>
+
+                        EEE
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Vice President (Admin) -->
+
+            <article class="team-card">
+
+                <div class="team-card__image">
+
+                    <img
+                        src="assets/team/vp-admin.jpg"
+                        alt="Vice President Admin">
+
+                </div>
+
+                <div class="team-card__content">
+
+                    <span class="team-card__position">
+
+                        Vice President (Admin)
+
+                    </span>
+
+                    <h3>
+
+                        ABRAR FAIYAZ ANAN CHOWDHURY
+
+                    </h3>
+
+                    <p>
+
+                        Department
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Vice President (Logistic) -->
+
+            <article class="team-card">
+
+                <div class="team-card__image">
+
+                    <img
+                        src="assets/team/vp-logistic.jpg"
+                        alt="Vice President Logistic">
+
+                </div>
+
+                <div class="team-card__content">
+
+                    <span class="team-card__position">
+
+                        Vice President (Logistic)
+
+                    </span>
+
+                    <h3>
+
+                        FAHIM NABIL
+
+                    </h3>
+
+                    <p>
+
+                        MTE
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Vice President (Finance) -->
+
+            <article class="team-card">
+
+                <div class="team-card__image">
+
+                    <img
+                        src="assets/team/vp-finance.jpg"
+                        alt="Vice President Finance">
+
+                </div>
+
+                <div class="team-card__content">
+
+                    <span class="team-card__position">
+
+                        Vice President (Finance)
+
+                    </span>
+
+                    <h3>
+
+                        Name Here
+
+                    </h3>
+
+                    <p>
+
+                        Department
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Joint Secretary (Roster) -->
+
+            <article class="team-card">
+
+                <div class="team-card__image">
+
+                    <img
+                        src="assets/team/joint-roster.jpg"
+                        alt="Joint Secretary Roster">
+
+                </div>
+
+                <div class="team-card__content">
+
+                    <span class="team-card__position">
+
+                        Joint Secretary (Roster)
+
+                    </span>
+
+                    <h3>
+
+                        Name Here
+
+                    </h3>
+
+                    <p>
+
+                        Department
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Publicity Secretary -->
+
+            <article class="team-card">
+
+                <div class="team-card__image">
+
+                    <img
+                        src="assets/team/publicity-secretary.jpg"
+                        alt="Publicity Secretary">
+
+                </div>
+
+                <div class="team-card__content">
+
+                    <span class="team-card__position">
+
+                        Publicity Secretary
+
+                    </span>
+
+                    <h3>
+
+                        Name Here
+
+                    </h3>
+
+                    <p>
+
+                        Department
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Joint Secretary (Organizing) -->
+
+            <article class="team-card">
+
+                <div class="team-card__image">
+
+                    <img
+                        src="assets/team/joint-organizing.jpg"
+                        alt="Joint Secretary Organizing">
+
+                </div>
+
+                <div class="team-card__content">
+
+                    <span class="team-card__position">
+
+                        Joint Secretary (Organizing)
+
+                    </span>
+
+                    <h3>
+
+                        Name Here
+
+                    </h3>
+
+                    <p>
+
+                        Department
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Joint Secretary (Publicity) -->
+
+            <article class="team-card">
+
+                <div class="team-card__image">
+
+                    <img
+                        src="assets/team/joint-publicity.jpg"
+                        alt="Joint Secretary Publicity">
+
+                </div>
+
+                <div class="team-card__content">
+
+                    <span class="team-card__position">
+
+                        Joint Secretary (Publicity)
+
+                    </span>
+
+                    <h3>
+
+                        Name Here
+
+                    </h3>
+
+                    <p>
+
+                        Department
+
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <div class="team__footer">
+
+            <p>
+
+                Every member of the Executive Panel plays a vital role
+                in organizing tournaments, supporting students and
+                strengthening the esports culture at RUET.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =====================================================
+     JOIN COMMUNITY CTA
+====================================================== -->
+
+<section
+    id="join"
+    class="cta">
+
+    <div class="container">
+
+        <div class="cta__wrapper">
+
+            <div class="cta__content">
+
+                <span class="section-tag">
+
+                    JOIN REC
+
+                </span>
+
+                <h2 class="section-title">
+
+                    Ready to Level Up Your Esports Journey?
+
+                </h2>
+
+                <p class="section-description">
+
+                    Whether you're a casual gamer,
+                    competitive player or content creator,
+                    there's a place for you in the RUET
+                    Esports Community.
+
+                </p>
+
+                <div class="cta__buttons">
+
+                    <a
+                        href="#contact"
+                        class="button button--primary">
+
+                        Become a Member
+
+                    </a>
+
+                    <a
+                        href="#events"
+                        class="button button--secondary">
+
+                        Explore Events
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="cta__card">
+
+                <h3>
+
+                    Why Join REC?
+
+                </h3>
+
+                <ul class="cta__features">
+
+                    <li>🎮 Competitive Tournaments</li>
+
+                    <li>🤝 Friendly Gaming Community</li>
+
+                    <li>🏆 Inter-University Competitions</li>
+
+                    <li>🎤 Workshops & Gaming Events</li>
+
+                    <li>🚀 Leadership Opportunities</li>
+
+                    <li>💚 Lifetime Memories</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section
+    id="contact"
+    class="contact">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+
+                CONTACT
+
+            </span>
+
+            <h2 class="section-title">
+
+                Get In Touch
+
+            </h2>
+
+            <p class="section-description">
+
+                Have questions about the RUET Esports Community,
+                interested in collaborating, or looking to become
+                a part of REC? Reach us through any of our official
+                communication channels.
+
+            </p>
+
+        </div>
+
+
+        <div class="contact__grid">
+
+            <!-- Address -->
+
+            <a
+                href="https://maps.google.com/?q=Rajshahi+University+of+Engineering+and+Technology"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-card">
+
+                <div class="contact-card__icon">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                </div>
+
+                <h3>
+
+                    Visit Us
+
+                </h3>
+
+                <p>
+
+                    Rajshahi University of Engineering &
+                    Technology (RUET),
+                    Rajshahi, Bangladesh
+
+                </p>
+
+            </a>
+
+
+            <!-- Email -->
+
+            <a
+                href="mailto:recofficial.ruet@gmail.com"
+                class="contact-card">
+
+                <div class="contact-card__icon">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </div>
+
+                <h3>
+
+                    Email Us
+
+                </h3>
+
+                <p>
+
+                    recofficial.ruet@gmail.com
+
+                </p>
+
+            </a>
+
+
+            <!-- Facebook -->
+
+            <a
+                href="https://www.facebook.com/share/1Ekezjy7Fy/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-card">
+
+                <div class="contact-card__icon">
+
+                    <i class="fa-brands fa-facebook-f"></i>
+
+                </div>
+
+                <h3>
+
+                    Facebook
+
+                </h3>
+
+                <p>
+
+                    Follow announcements,
+                    tournament updates,
+                    community news and photos.
+
+                </p>
+
+            </a>
+
+
+            <!-- Discord -->
+
+            <a
+                href="https://discord.gg/yaeEB64mD"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-card">
+
+                <div class="contact-card__icon">
+
+                    <i class="fa-brands fa-discord"></i>
+
+                </div>
+
+                <h3>
+
+                    Discord
+
+                </h3>
+
+                <p>
+
+                    Join the official REC server,
+                    meet members, find teammates
+                    and participate in discussions.
+
+                </p>
+
+            </a>
+
+        </div>
+
+
+        <!-- Bottom Buttons -->
+
+        <div class="contact__buttons">
+
+            <a
+                href="https://www.facebook.com/share/1Ekezjy7Fy/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button button--secondary">
+
+                <i class="fa-brands fa-facebook-f"></i>
+
+                Visit Facebook
+
+            </a>
+
+            <a
+                href="https://discord.gg/yaeEB64mD"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button button--primary">
+
+                <i class="fa-brands fa-discord"></i>
+
+                Join Discord
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <!-- ==========================================
+             Top
+        ========================================== -->
+
+        <div class="footer__top">
+
+            <!-- Brand -->
+
+            <div class="footer__brand">
+
+                <div class="footer__brand-header">
+
+                    <img
+                        src="assets/logo/rec-circle.png"
+                        alt="RUET Esports Community">
+
+                    <div>
+
+                        <h2>
+
+                            RUET Esports Community
+
+                        </h2>
+
+                        <span>
+
+                            Official Esports Organization
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <p>
+
+                    Building a competitive and inclusive esports
+                    culture at Rajshahi University of Engineering
+                    & Technology through tournaments,
+                    workshops and community events.
+
+                </p>
+
+            </div>
+
+
+            <!-- Quick Links -->
+
+            <div class="footer__column">
+
+                <h3>
+
+                    Quick Links
+
+                </h3>
+
+                <ul>
 
                     <li><a href="#hero">Home</a></li>
 
@@ -71,170 +1744,160 @@
 
                     <li><a href="#gallery">Gallery</a></li>
 
+                    <li><a href="#team">Team</a></li>
+
                     <li><a href="#contact">Contact</a></li>
 
                 </ul>
 
-                <!-- CTA -->
+            </div>
 
-                <a href="#" class="btn btn-nav">
 
-                    Join Community
+            <!-- Community -->
 
-                </a>
+            <div class="footer__column">
 
-            </nav>
+                <h3>
+
+                    Community
+
+                </h3>
+
+                <ul>
+
+                    <li>
+
+                        <a
+                            href="https://www.facebook.com/share/1Ekezjy7Fy/?mibextid=wwXIfr"
+                            target="_blank">
+
+                            Facebook
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a
+                            href="https://discord.gg/yaeEB64mD"
+                            target="_blank">
+
+                            Discord
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Contact -->
+
+            <div class="footer__column">
+
+                <h3>
+
+                    Contact
+
+                </h3>
+
+                <ul>
+
+                    <li>
+
+                        Rajshahi University of Engineering &
+                        Technology (RUET)
+
+                    </li>
+
+                    <li>
+
+                        Rajshahi, Bangladesh
+
+                    </li>
+
+                    <li>
+
+                        <a href="mailto:recofficial.ruet@gmail.com">
+
+                            recofficial.ruet@gmail.com
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
 
         </div>
 
-    </header>
 
-    <!-- ===========================================
-                    MAIN
-    ============================================ -->
+        <!-- Divider -->
 
-    <main>
+        <div class="footer__divider"></div>
 
-        <!-- =======================================
-                    HERO
-        ======================================== -->
 
-        <section id="hero" class="hero">
+        <!-- Bottom -->
 
-            <!-- Background -->
+        <div class="footer__bottom">
 
-            <div class="hero-grid"></div>
+            <p>
 
-            <div class="hero-glow"></div>
+                © 2026 RUET Esports Community
 
-            <div class="container hero-wrapper">
+            </p>
 
-                <!-- Left Side -->
+            <div class="footer__social">
 
-                <div class="hero-content">
+                <a
+                    href="https://www.facebook.com/share/1Ekezjy7Fy/?mibextid=wwXIfr"
+                    target="_blank">
 
-                    <span class="hero-tag">
+                    <i class="fa-brands fa-facebook-f"></i>
 
-                        OFFICIAL ESPORTS COMMUNITY
+                </a>
 
-                    </span>
+                <a
+                    href="https://discord.gg/yaeEB64mD"
+                    target="_blank">
 
-                    <h1>
+                    <i class="fa-brands fa-discord"></i>
 
-                        PLAY.<br>
+                </a>
 
-                        COMPETE.<br>
+                <a
+                    href="mailto:recofficial.ruet@gmail.com">
 
-                        <span>CONNECT.</span>
+                    <i class="fa-solid fa-envelope"></i>
 
-                    </h1>
-
-                    <p>
-
-                        The official gaming community of Rajshahi University
-                        of Engineering & Technology.
-
-                        Join tournaments, discover teammates, and represent
-                        RUET in competitive esports.
-
-                    </p>
-
-                    <div class="hero-buttons">
-
-                        <a href="#contact" class="btn btn-primary">
-
-                            Join Community
-
-                        </a>
-
-                        <a href="#events" class="btn btn-secondary">
-
-                            Explore Events
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <!-- Right Side -->
-
-                <div class="hero-image">
-
-                    <img src="assets/logo/rec-horizontal.png"
-                        alt="RUET Esports Community">
-
-                </div>
+                </a>
 
             </div>
 
-            <!-- Scroll -->
+            <p>
 
-            <div class="scroll-down">
+                Made with
+                <span class="footer__heart">❤</span>
+                by REC
 
-                <span></span>
+            </p>
 
-                <p>Scroll To Explore</p>
+        </div>
 
-            </div>
+    </div>
 
-        </section>
+</footer>
+</main>
 
-        <!-- =======================================
-            ABOUT
-        ======================================== -->
+<!-- =====================================================
+     JavaScript
+====================================================== -->
 
-        <section id="about">
-
-        </section>
-
-        <!-- =======================================
-            GAMES
-        ======================================== -->
-
-        <section id="games">
-
-        </section>
-
-        <!-- =======================================
-            EVENTS
-        ======================================== -->
-
-        <section id="events">
-
-        </section>
-
-        <!-- =======================================
-            GALLERY
-        ======================================== -->
-
-        <section id="gallery">
-
-        </section>
-
-        <!-- =======================================
-            CONTACT
-        ======================================== -->
-
-        <section id="contact">
-
-        </section>
-
-    </main>
-
-    <!-- ===========================================
-                    FOOTER
-    ============================================ -->
-
-    <footer>
-
-    </footer>
-
-    <!-- ===========================================
-                    JAVASCRIPT
-    ============================================ -->
-
-    <script src="js/main.js"></script>
+<script type="module" src="js/main.js"></script>
 
 </body>
 

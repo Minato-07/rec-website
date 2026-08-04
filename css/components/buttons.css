@@ -1,0 +1,203 @@
+/* =====================================================
+   RUET Esports Community
+   Button Component
+===================================================== */
+
+
+/* ==========================================
+   Base Button
+========================================== */
+
+.button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:16px 30px;
+
+    border:none;
+
+    border-radius:var(--radius-pill);
+
+    font-family:var(--font-primary);
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    white-space:nowrap;
+
+    transition:all .3s ease;
+
+}
+
+
+/* ==========================================
+   Primary
+========================================== */
+
+.button--primary{
+
+    color:#09110d;
+
+    background:linear-gradient(
+
+        135deg,
+
+        var(--color-primary),
+
+        var(--color-primary-dark)
+
+    );
+
+    box-shadow:
+
+        0 10px 30px rgba(50,230,118,.22);
+
+}
+
+
+.button--primary:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+        0 20px 40px rgba(50,230,118,.30);
+
+}
+
+
+.button--primary:active{
+
+    transform:translateY(0);
+
+}
+
+
+/* ==========================================
+   Secondary
+========================================== */
+
+.button--secondary{
+
+    color:var(--color-text);
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.10);
+
+}
+
+
+.button--secondary:hover{
+
+    transform:translateY(-3px);
+
+    border-color:rgba(50,230,118,.30);
+
+    background:rgba(50,230,118,.08);
+
+    color:var(--color-primary);
+
+}
+
+
+/* ==========================================
+   Outline
+========================================== */
+
+.button--outline{
+
+    color:var(--color-primary);
+
+    background:transparent;
+
+    border:1px solid rgba(50,230,118,.30);
+
+}
+
+
+.button--outline:hover{
+
+    background:rgba(50,230,118,.10);
+
+    transform:translateY(-3px);
+
+}
+
+
+/* ==========================================
+   Full Width
+========================================== */
+
+.button--block{
+
+    width:100%;
+
+}
+
+
+/* ==========================================
+   Focus
+========================================== */
+
+.button:focus-visible{
+
+    outline:none;
+
+    box-shadow:
+
+        0 0 0 4px rgba(50,230,118,.15);
+
+}
+
+
+/* ==========================================
+   Disabled
+========================================== */
+
+.button:disabled{
+
+    opacity:.6;
+
+    cursor:not-allowed;
+
+}
+
+
+/* ==========================================
+   Small Button
+========================================== */
+
+.button--sm{
+
+    padding:12px 22px;
+
+    font-size:.9rem;
+
+}
+
+
+/* ==========================================
+   Large Button
+========================================== */
+
+.button--lg{
+
+    padding:18px 38px;
+
+    font-size:1.05rem;
+
+}

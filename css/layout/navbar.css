@@ -1,0 +1,659 @@
+/* =====================================================
+   RUET Esports Community
+   Navbar
+===================================================== */
+
+
+/* ==========================================
+   Header
+========================================== */
+
+.header{
+
+    position:fixed;
+
+    top:18px;
+
+    left:0;
+
+    width:100%;
+
+    z-index:var(--z-navbar);
+
+    transition:
+        background .35s ease,
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease,
+        top .35s ease;
+
+    pointer-events:none;
+
+}
+
+
+/* ==========================================
+   Floating Container
+========================================== */
+
+.header .container{
+
+    max-width:1380px;
+
+    margin:0 auto;
+
+    pointer-events:auto;
+
+}
+
+
+/* ==========================================
+   Navbar
+========================================== */
+
+.navbar{
+
+    height:78px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:40px;
+
+    padding:0 24px;
+
+    border-radius:22px;
+
+    background:rgba(10,14,22,.45);
+
+    border:1px solid rgba(255,255,255,.06);
+
+    backdrop-filter:blur(14px);
+
+    -webkit-backdrop-filter:blur(14px);
+
+    box-shadow:
+
+        0 18px 45px rgba(0,0,0,.18);
+
+    transition:all .35s ease;
+
+}
+
+
+/* ==========================================
+   Scrolled
+========================================== */
+
+.header--scrolled{
+
+    top:12px;
+
+}
+
+.header--scrolled .navbar{
+
+    height:72px;
+
+    background:rgba(10,14,22,.82);
+
+    backdrop-filter:blur(22px);
+
+    -webkit-backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+
+        0 24px 60px rgba(0,0,0,.30);
+
+}
+
+
+/* ==========================================
+   Logo
+========================================== */
+
+.navbar__logo{
+
+    display:flex;
+
+    align-items:center;
+
+    flex-shrink:0;
+
+}
+
+.navbar__logo img{
+
+    height:58px;
+
+    transition:all .35s ease;
+
+    filter:drop-shadow(
+
+        0 0 12px rgba(50,230,118,.18)
+
+    );
+
+}
+
+.header--scrolled .navbar__logo img{
+
+    height:52px;
+
+}
+
+
+/* ==========================================
+   Menu
+========================================== */
+
+.navbar__menu{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:34px;
+
+    margin-left:auto;
+
+}
+
+
+/* ==========================================
+   Items
+========================================== */
+
+.navbar__item{
+
+    list-style:none;
+
+}
+
+
+/* ==========================================
+   Links
+========================================== */
+
+.navbar__link{
+
+    position:relative;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:.95rem;
+
+    font-weight:500;
+
+    color:var(--color-text);
+
+    transition:all .3s ease;
+
+}
+
+.navbar__link:hover{
+
+    color:var(--color-primary);
+
+}
+
+
+/* ==========================================
+   Animated Underline
+========================================== */
+
+.navbar__link::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    border-radius:999px;
+
+    background:var(--color-primary);
+
+    transform:translateX(-50%);
+
+    transition:.3s ease;
+
+}
+
+.navbar__link:hover::after,
+
+.navbar__link.active::after{
+
+    width:100%;
+
+}
+
+.navbar__link.active{
+
+    color:var(--color-primary);
+
+}
+
+
+/* ==========================================
+   CTA
+========================================== */
+
+.navbar__button{
+
+    margin-left:12px;
+
+    flex-shrink:0;
+
+}
+
+
+/* ==========================================
+   Toggle
+========================================== */
+
+.navbar__toggle{
+
+    display:none;
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    background:transparent;
+
+    cursor:pointer;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-direction:column;
+
+    gap:6px;
+
+    z-index:1100;
+
+}
+
+
+/* ==========================================
+   Hamburger Lines
+========================================== */
+
+.navbar__toggle span{
+
+    width:26px;
+
+    height:2px;
+
+    border-radius:999px;
+
+    background:var(--color-white);
+
+    transition:all .35s ease;
+
+}
+
+
+/* ==========================================
+   Toggle Animation
+========================================== */
+
+.navbar__toggle.is-active span:nth-child(1){
+
+    transform:
+
+        translateY(8px)
+
+        rotate(45deg);
+
+}
+
+.navbar__toggle.is-active span:nth-child(2){
+
+    opacity:0;
+
+}
+
+.navbar__toggle.is-active span:nth-child(3){
+
+    transform:
+
+        translateY(-8px)
+
+        rotate(-45deg);
+
+}
+
+
+/* ==========================================
+   Overlay
+========================================== */
+
+.navbar__overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    backdrop-filter:blur(10px);
+
+    -webkit-backdrop-filter:blur(10px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s ease;
+
+    z-index:998;
+
+}
+
+.navbar__overlay.is-active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+/* ==========================================
+   Mobile Navigation
+========================================== */
+
+@media (max-width: 992px){
+
+    .header{
+
+        top:14px;
+
+    }
+
+    .header .container{
+
+        width:min(94%,1380px);
+
+    }
+
+    .navbar{
+
+        height:74px;
+
+        padding:0 20px;
+
+    }
+
+    .header--scrolled .navbar{
+
+        height:70px;
+
+    }
+
+    .navbar__toggle{
+
+        display:flex;
+
+    }
+
+    .navbar__button{
+
+        display:none;
+
+    }
+
+    .navbar__menu{
+
+        position:fixed;
+
+        top:0;
+
+        right:-100%;
+
+        width:min(360px,90vw);
+
+        height:100vh;
+
+        padding:120px 40px 50px;
+
+        flex-direction:column;
+
+        justify-content:flex-start;
+
+        align-items:flex-start;
+
+        gap:28px;
+
+        margin:0;
+
+        background:rgba(12,17,26,.92);
+
+        backdrop-filter:blur(24px);
+
+        -webkit-backdrop-filter:blur(24px);
+
+        border-left:1px solid rgba(255,255,255,.08);
+
+        box-shadow:-20px 0 60px rgba(0,0,0,.35);
+
+        transition:right .4s ease;
+
+        z-index:999;
+
+    }
+
+    .navbar__menu.is-open{
+
+        right:0;
+
+    }
+
+    .navbar__item{
+
+        width:100%;
+
+    }
+
+    .navbar__link{
+
+        width:100%;
+
+        justify-content:flex-start;
+
+        font-size:1.1rem;
+
+        padding:8px 0;
+
+    }
+
+    .navbar__link::after{
+
+        left:0;
+
+        transform:none;
+
+        bottom:-2px;
+
+    }
+
+}
+
+
+/* ==========================================
+   Small Mobile
+========================================== */
+
+@media (max-width:576px){
+
+    .header{
+
+        top:10px;
+
+    }
+
+    .header .container{
+
+        width:95%;
+
+    }
+
+    .navbar{
+
+        height:68px;
+
+        padding:0 16px;
+
+        border-radius:18px;
+
+    }
+
+    .header--scrolled .navbar{
+
+        height:64px;
+
+    }
+
+    .navbar__logo img{
+
+        height:50px;
+
+    }
+
+    .header--scrolled .navbar__logo img{
+
+        height:46px;
+
+    }
+
+    .navbar__menu{
+
+        width:100%;
+
+        padding:100px 28px 40px;
+
+    }
+
+}
+
+
+/* ==========================================
+   Body Lock
+========================================== */
+
+body.menu-open{
+
+    overflow:hidden;
+
+}
+
+
+/* ==========================================
+   Focus States
+========================================== */
+
+.navbar__link:focus-visible,
+
+.navbar__button:focus-visible,
+
+.navbar__toggle:focus-visible{
+
+    outline:2px solid var(--color-primary);
+
+    outline-offset:4px;
+
+}
+
+
+/* ==========================================
+   Reduced Motion
+========================================== */
+
+@media (prefers-reduced-motion: reduce){
+
+    .header,
+
+    .navbar,
+
+    .navbar__logo img,
+
+    .navbar__menu,
+
+    .navbar__toggle span,
+
+    .navbar__overlay,
+
+    .navbar__link,
+
+    .navbar__link::after{
+
+        transition:none !important;
+
+    }
+
+}
+
+
+/* ==========================================
+   Large Desktop
+========================================== */
+
+@media (min-width:1500px){
+
+    .header .container{
+
+        max-width:1450px;
+
+    }
+
+}
+
+
+/* ==========================================
+   Hover Devices Only
+========================================== */
+
+@media (hover:hover){
+
+    .navbar:hover{
+
+        border-color:rgba(50,230,118,.10);
+
+    }
+
+    .navbar__button:hover{
+
+        transform:translateY(-2px);
+
+    }
+
+    .navbar__logo:hover img{
+
+        transform:scale(1.03);
+
+    }
+
+}
+
+
+/* ==========================================
+   End
+========================================== */

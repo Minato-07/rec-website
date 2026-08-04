@@ -1,0 +1,207 @@
+/* =====================================================
+   Tablet (≤ 1024px)
+===================================================== */
+
+@media (max-width: 1024px){
+
+    /* ==========================================
+       Global
+    ========================================== */
+
+    .container{
+
+        width:min(92%,1200px);
+
+    }
+
+    section{
+
+        padding:100px 0;
+
+    }
+
+    .section-title{
+
+        font-size:2.5rem;
+
+    }
+
+    /* ==========================================
+       Navbar
+    ========================================== */
+
+    .navbar{
+
+        padding:0 24px;
+
+    }
+
+    .navbar__menu{
+
+        gap:24px;
+
+    }
+
+    .navbar__button{
+
+        display:none;
+
+    }
+
+    /* ==========================================
+       Hero
+    ========================================== */
+
+    .hero{
+
+        padding-top:160px;
+
+    }
+
+    .hero__wrapper{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+        gap:60px;
+
+    }
+
+    .hero__content{
+
+        align-items:center;
+
+    }
+
+    .hero__description{
+
+        margin-inline:auto;
+
+    }
+
+    .hero__buttons{
+
+        justify-content:center;
+
+    }
+
+    .hero__stats{
+
+        justify-content:center;
+
+    }
+
+    .hero__logo img{
+
+        max-width:500px;
+
+    }
+
+    /* ==========================================
+       About
+    ========================================== */
+
+    .about__content{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .about__stats{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    /* ==========================================
+       Games
+    ========================================== */
+
+    .games__grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    /* ==========================================
+       Events
+    ========================================== */
+
+    .events__grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    /* ==========================================
+       Gallery
+    ========================================== */
+
+    .gallery__grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .gallery__item--large,
+
+    .gallery__item--wide{
+
+        grid-column:span 1;
+
+        grid-row:span 1;
+
+    }
+
+    /* ==========================================
+       Team
+    ========================================== */
+
+    .team__grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    /* ==========================================
+       CTA
+    ========================================== */
+
+    .cta__wrapper{
+
+        grid-template-columns:1fr;
+
+        padding:60px;
+
+    }
+
+    /* ==========================================
+       Contact
+    ========================================== */
+
+    .contact__wrapper{
+
+        grid-template-columns:1fr;
+
+    }
+
+    /* ==========================================
+       Footer
+    ========================================== */
+
+    .footer__top{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .footer__bottom{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+}

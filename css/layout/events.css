@@ -1,0 +1,295 @@
+/* =====================================================
+   RUET Esports Community
+   Events Section
+===================================================== */
+
+
+/* ==========================================
+   Section
+========================================== */
+
+.events{
+
+    position:relative;
+
+    padding:140px 0;
+
+}
+
+
+/* ==========================================
+   Events Grid
+========================================== */
+
+.events__grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:32px;
+
+    margin-top:80px;
+
+}
+
+
+/* ==========================================
+   Event Card
+========================================== */
+
+.event-card{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:28px;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.event-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+/* ==========================================
+   Accent Line
+========================================== */
+
+.event-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:4px;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        to bottom,
+
+        var(--color-primary),
+
+        transparent
+
+    );
+
+    opacity:0;
+
+    transition:opacity .35s ease;
+
+}
+
+.event-card:hover::after{
+
+    opacity:1;
+
+}
+
+
+/* ==========================================
+   Date Box
+========================================== */
+
+.event-card__date{
+
+    width:92px;
+
+    min-width:92px;
+
+    height:110px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:18px;
+
+    background:linear-gradient(
+
+        180deg,
+
+        rgba(50,230,118,.14),
+
+        rgba(50,230,118,.05)
+
+    );
+
+    border:1px solid rgba(50,230,118,.22);
+
+    transition:var(--transition);
+
+}
+
+.event-card:hover .event-card__date{
+
+    transform:scale(1.06);
+
+}
+
+.event-card__day{
+
+    font-size:2rem;
+
+    font-weight:800;
+
+    color:var(--color-primary);
+
+    line-height:1;
+
+}
+
+.event-card__month{
+
+    margin-top:8px;
+
+    font-size:.9rem;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    color:var(--color-text);
+
+}
+
+
+/* ==========================================
+   Content
+========================================== */
+
+.event-card__content{
+
+    flex:1;
+
+    transition:transform .35s ease;
+
+}
+
+.event-card:hover .event-card__content{
+
+    transform:translateX(6px);
+
+}
+
+
+/* ==========================================
+   Badge
+========================================== */
+
+.event-card__badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:7px 16px;
+
+    margin-bottom:18px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:var(--color-primary);
+
+    font-size:.82rem;
+
+    font-weight:600;
+
+}
+
+
+/* ==========================================
+   Title
+========================================== */
+
+.event-card h3{
+
+    margin-bottom:16px;
+
+    font-size:1.55rem;
+
+}
+
+
+/* ==========================================
+   Description
+========================================== */
+
+.event-card p{
+
+    color:var(--color-text-muted);
+
+    line-height:1.8;
+
+}
+
+
+/* ==========================================
+   Meta
+========================================== */
+
+.event-card__meta{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:22px;
+
+    margin-top:24px;
+
+    color:var(--color-text-muted);
+
+    font-size:.92rem;
+
+}
+
+.event-card__meta span{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+
+/* ==========================================
+   Bottom Button
+========================================== */
+
+.events__button{
+
+    margin-top:70px;
+
+    display:flex;
+
+    justify-content:center;
+
+}

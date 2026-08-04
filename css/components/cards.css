@@ -1,0 +1,132 @@
+/* =====================================================
+   Card Component System
+===================================================== */
+
+
+/* ==========================================
+   Base Card
+========================================== */
+
+.card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:var(--card-padding);
+
+    border-radius:var(--card-radius);
+
+    background:var(--card-background);
+
+    border:var(--card-border);
+
+    box-shadow:var(--shadow-xs);
+
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition),
+        background var(--transition);
+
+}
+
+
+/* ==========================================
+   Hover
+========================================== */
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    border:var(--card-border-hover);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+
+/* ==========================================
+   Glow Effect
+========================================== */
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-80px;
+
+    right:-80px;
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    background:rgba(50,230,118,.08);
+
+    filter:blur(60px);
+
+    opacity:0;
+
+    transition:opacity .35s ease;
+
+}
+
+.card:hover::before{
+
+    opacity:1;
+
+}
+
+
+/* ==========================================
+   Card Header
+========================================== */
+
+.card__title{
+
+    margin-bottom:14px;
+
+    color:var(--color-white);
+
+}
+
+
+/* ==========================================
+   Card Text
+========================================== */
+
+.card__text{
+
+    color:var(--color-text-muted);
+
+    line-height:1.8;
+
+}
+
+
+/* ==========================================
+   Compact Card
+========================================== */
+
+.card--compact{
+
+    padding:24px;
+
+}
+
+
+/* ==========================================
+   Large Card
+========================================== */
+
+.card--large{
+
+    padding:42px;
+
+}
