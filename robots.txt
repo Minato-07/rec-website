@@ -1,5 +1,4 @@
 User-agent: *
-
 Allow: /
 
-Sitemap: https://ruetesports.xyz/sitemap.xml
+Sitemap: https://www.ruetesports.xyz/sitemap.xml
