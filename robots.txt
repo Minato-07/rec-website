@@ -2,4 +2,4 @@ User-agent: *
 
 Allow: /
 
-Sitemap: https://ruetesports.vercel.app/sitemap.xml
+Sitemap: https://ruetesports.xyz/sitemap.xml
